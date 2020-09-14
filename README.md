@@ -36,31 +36,38 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ├── public
 ├── src
 │   ├── api
-│   │    ├── Axios.js # 对 Axios 进行二封装
-│   │    ├── config.js # 定义baseUrl 和 接口请求地址 （改）
-│   │    └── index.js # 封装后的 请求方法
-│   ├── assets # 静态文件
-│   │    ├── font # 字体
-│   │    └── image # 图片
-│   ├── components # 公共组件
-│   ├── layout # 页面布局
-│   │    ├── Nav.vue # 侧边栏
-│   │    └── Top.vue # 头部
-│   ├── router # 定义路由相关
-│   │    ├── index.js # 定义注册路由
-│   │    ├── guard.js # 导航守卫
-│   │    └── routes.js # 导出一些需要 动态注册的路由
-│   ├── store  # VueX
-│   │    ├── index.js # 定义VueX
-│   │    └── modules # VueX 模块化
-│   ├── utils  # 自己封装的 函数库
-│   │    ├── asyncRoutes.js # 动态注册路由的函数
+│   │    ├── Axios.js                           # 对 Axios 进行二封装
+│   │    ├── config.js                          # 定义baseUrl 和 接口请求地址 （后边改）
+│   │    └── index.js                           # 封装后的 请求方法
+│   │
+│   ├── assets                                  # 静态文件
+│   │    ├── font                               # 字体
+│   │    └── image                              # 图片
+│   │
+│   ├── components                              # 公共组件
+│   │
+│   ├── layout                                  # 页面布局
+│   │    ├── Nav.vue                            # 侧边栏
+│   │    └── Top.vue                            # 头部
+│   │
+│   ├── router                                  # 定义路由相关
+│   │    ├── index.js                           # 定义注册路由
+│   │    ├── guard.js                           # 导航守卫
+│   │    └── routes.js                          # 导出一些需要 动态注册的路由
+│   │
+│   ├── store                                   # VueX
+│   │    ├── index.js                           # 定义VueX
+│   │    └── modules                            # VueX 模块化
+│   │
+│   ├── utils                                   # 自己封装的 函数库
+│   │    ├── asyncRoutes.js                     # 动态注册路由的函数
 │   │    └── ###
-│   ├── views  # 页面代码
-│   ├── style  # 样式
-│   ├── App.vue
-│   └── main.js
-├── 
+│   │
+│   ├── views                                   # 页面代码
+│   ├── style                                   # 样式
+│   ├── App.vue                                 # 根组件
+│   └── main.js                                 # 入口文件
+│   
 ├── .browserslistrc                             # 浏览器兼容 （https://cli.vuejs.org/zh/guide/browser-compatibility.html#browserslist）
 ├── .eslintrc.js                                # eslint 的配置文件 （https://cli.vuejs.org/zh/config/#eslint）
 ├── babel.config.js                             # bable 配置文件 （https://cli.vuejs.org/zh/config/#babel）
