@@ -12,15 +12,6 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(ElementUI)
 
-// 封装 请求函数
-import $http from '@/api'
-Vue.prototype.$http = $http
-
-// 自定义表单 插件
-// import FormMaking from 'form-making'
-// import 'form-making/dist/FormMaking.css'
-// Vue.use(FormMaking)
-
 // 代码 高亮
 import VueHighlightJS from 'vue-highlightjs'
 import 'highlight.js/styles/monokai-sublime.css'
