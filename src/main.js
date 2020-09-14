@@ -5,7 +5,7 @@ import router from './router/index.js'
 import './router/guard'
 
 // 重置 样式
-import '@/assets/css/reset.css'
+import '@/style/reset.css'
 
 // elementUI
 import ElementUI from 'element-ui'
