@@ -38,7 +38,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 │   ├── api
 │   │    ├── Axios.js                           # 对 Axios 进行二次封装
 │   │    ├── common.js                          # 编写公共接口
-│   │    └── index.js                           # 封装后的 请求方法
+│   │    └── user.js                            # 用户相关接口
 │   │
 │   ├── assets                                  # 静态文件
 │   │    ├── font                               # 字体
