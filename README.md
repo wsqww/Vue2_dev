@@ -36,8 +36,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ├── public
 ├── src
 │   ├── api
-│   │    ├── Axios.js                           # 对 Axios 进行二封装
-│   │    ├── config.js                          # 定义baseUrl 和 接口请求地址 （后边改）
+│   │    ├── Axios.js                           # 对 Axios 进行二次封装
+│   │    ├── common.js                          # 编写公共接口
 │   │    └── index.js                           # 封装后的 请求方法
 │   │
 │   ├── assets                                  # 静态文件
