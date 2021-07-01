@@ -12,7 +12,7 @@ module.exports = {
     // 路径
     publicPath: process.env.NODE_ENV === 'production' ? process.env.VUE_PUBLIC_PATH : '/',
     // 打包
-    outputDir: 'web',
+    outputDir: 'dist',
 
 
 
