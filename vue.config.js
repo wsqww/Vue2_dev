@@ -1,3 +1,7 @@
+
+// console.log('>>>>',process.argv);
+// console.log(process.env.VUE_PUBLIC_PATH, '<<<<<<<');
+
 module.exports = {
     // 路径
     // publicPath: process.env.NODE_ENV === 'production' ? '/' : '/',
@@ -6,7 +10,7 @@ module.exports = {
 
     // github 访问路径
     // 路径
-    publicPath: process.env.NODE_ENV === 'production' ? '/wsq_dev/' : '/',
+    publicPath: process.env.NODE_ENV === 'production' ? process.env.VUE_PUBLIC_PATH : '/',
     // 打包
     outputDir: 'web',
 
