@@ -22,6 +22,6 @@ git commit -m 'deploy'
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:pages
 # git push -f hhttps://github.com/wsqww/Vue2_dev.git master:pages
-git push -f https://github.com.cnpmjs.org/wsqww/Vue2_dev.git master:page
+git push -f https://github.com/wsqww/Vue2_dev.git master:page
 
 cd -
