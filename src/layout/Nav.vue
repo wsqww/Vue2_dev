@@ -19,7 +19,7 @@
       <template v-for="(v, k) in nav_list">
         <el-submenu v-if="v.children && v.children.length > 0 " :key="k" :index="v.path">
           <template slot="title">
-            <i :class="['iconfont', v.meta.icon]"></i>
+            <i v-if="v.meta.icon" :class="['iconfont', v.meta.icon]"></i>
             <span slot="title">{{v.meta.title}}</span>
           </template>
           <el-menu-item
@@ -29,10 +29,12 @@
             :route="val.path"
           >{{val.meta.title}}</el-menu-item>
         </el-submenu>
-        <el-menu-item v-else :key="k" :index="v.path" :route="v.path">
-          <i :class="['iconfont', v.meta.icon]"></i>
-          <span slot="title">{{v.meta.title}}</span>
-        </el-menu-item>
+        <template v-else>
+          <el-menu-item v-if="v.path !== '**'" :key="k" :index="v.path" :route="v.path">
+              <i v-if="v.meta.icon" :class="['iconfont', v.meta.icon]"></i>
+              <span slot="title">{{v.meta.title}}</span>
+          </el-menu-item>
+        </template>
       </template>
     </el-menu>
     <!-- {{navList}} -->
@@ -53,11 +55,11 @@ export default {
   },
   computed: {
     nav_active() {
-      console.log(this.$store.getters['nav/get_navActive']);
+      // console.log(this.$store.getters['nav/get_navActive']);
       return this.$store.getters['nav/get_navActive'];
     },
     nav_list() {
-      console.log(this.$store.getters['nav/get_navList']);
+      // console.log(this.$store.getters['nav/get_navList']);
       return this.$store.getters['nav/get_navList'];
     }
   },

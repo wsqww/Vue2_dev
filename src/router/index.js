@@ -4,9 +4,11 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 import Home from '@/views/home/Home.vue';
+
+const rootPath = '/Vue2_dev';
 export const StaticRoutes = [
   {
-    path: '/',
+    path: `${rootPath}/`,
     name: 'home',
     component: Home,
     meta: {
@@ -15,7 +17,7 @@ export const StaticRoutes = [
     },
   },
   {
-    path: '/modbus',
+    path: `${rootPath}/modbus`,
     name: 'Modbus',
     component: () => import('@/views/modbus/Modbus.vue'),
     meta: {
@@ -24,7 +26,7 @@ export const StaticRoutes = [
     },
   },
   {
-    path: '/pagemaking',
+    path: `${rootPath}/pagemaking`,
     name: 'PageMaking',
     component: () => import('@/views/pageMaking/PageMaking.vue'),
     meta: {
@@ -33,7 +35,7 @@ export const StaticRoutes = [
     },
     children: [
       {
-        path: '/pagemaking/makingpage',
+        path: `${rootPath}/pagemaking/makingpage`,
         name: 'MakingPage',
         component: () => import('@/views/pageMaking/children/MakingPage.vue'),
         meta: {
@@ -50,6 +52,7 @@ export const StaticRoutes = [
       // },
     ]
   },
+  { path: `**`, redirect:  `${rootPath}/` },
 ];
 
 const createRouter = () =>
