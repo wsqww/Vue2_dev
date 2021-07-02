@@ -5,7 +5,7 @@ Vue.use(Router)
 
 import Home from '@/views/home/Home.vue';
 
-const rootPath = '/Vue2_dev';
+const rootPath = '';
 export const StaticRoutes = [
   {
     path: `${rootPath}/`,
@@ -57,7 +57,7 @@ export const StaticRoutes = [
 
 const createRouter = () =>
   new Router({
-    mode: 'history',
+    mode: 'hash',
     routes: StaticRoutes,
   });
 
