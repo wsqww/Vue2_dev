@@ -52,6 +52,15 @@ export const StaticRoutes = [
       // },
     ]
   },
+  {
+    path: `${rootPath}/proxy`,
+    name: 'Proxy',
+    component: () => import('@/views/proxyTest/proxyTest.vue'),
+    meta: {
+      title: 'proxyTest',
+      icon: ''
+    }
+  },
   { path: `**`, redirect:  `${rootPath}/` },
 ];
 
