@@ -6,6 +6,14 @@
     <p>
       age: <input type="text" v-model="formProxy.age">
     </p>
+    <hr>
+    formProxy2:  
+    <p>
+      name: <input type="text" v-model="formProxy2.name">
+    </p>
+    <p>
+      age: <input type="text" v-model="formProxy2.age">
+    </p>
   </div>
 </template>
 
@@ -15,7 +23,8 @@
     data(){
       return {
         form: {},
-        formProxy: null
+        formProxy: null,
+        formProxy2: null
       }
     },
     computed:{},
@@ -34,6 +43,17 @@
                 console.log('旧的值: ', obj[prop]);
                 if (obj[prop] !== value) {
                     console.log('改变的 key 是: ', prop);
+                }
+                obj[prop] = value;
+                return true;
+            }
+        });
+        this.formProxy2 = new Proxy(this.form, {
+            set: function(obj, prop, value){
+                console.log(obj, prop, value);
+                console.log('formProxy2 旧的值: ', obj[prop]);
+                if (obj[prop] !== value) {
+                    console.log('formProxy2 改变的 key 是: ', prop);
                 }
                 obj[prop] = value;
                 return true;
