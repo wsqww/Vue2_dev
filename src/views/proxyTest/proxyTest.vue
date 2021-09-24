@@ -14,10 +14,16 @@
     <p>
       age: <input type="text" v-model="formProxy2.age">
     </p>
+
+    <!-- <button @click="jsonpTest()">jsonp test</button>
+    <br>
+    <button @click="requestTest()">request test</button> -->
   </div>
 </template>
 
 <script>
+  // import request from '@/api/Axios';
+
   export default {
     name: '',
     data(){
@@ -59,7 +65,27 @@
                 return true;
             }
         });
-      }
+      },
+      // jsonpTest() {
+      //   const script = document.createElement('script');
+      //   script.type = 'text/javascript';
+      //   script.src = 'http://localhost:3000/jsonp_test';
+      //   script.onload = function(){
+      //     console.log('script');
+      //   }
+      //   document.body.appendChild(script);
+      // },
+      // requestTest() {
+      //   request({
+      //     url: 'http://localhost:3000/jsonp_test',
+      //     method: 'get',
+      //     baseURL: '',
+      //   }).then(res => {
+      //     console.log(res);
+      //   }).catch(err => {
+      //     console.log(err);
+      //   });
+      // }
     },
   }
 </script>
